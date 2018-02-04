@@ -1,7 +1,6 @@
 package com.shuiliandong.demo.simple.controller;
 
 
-import com.alibaba.fastjson.JSONObject;
 import com.shuiliandong.demo.simple.model.EmployeeMO;
 import com.shuiliandong.demo.simple.model.PageResultMO;
 import org.springframework.stereotype.Controller;
@@ -16,7 +15,7 @@ import java.util.List;
 @RequestMapping("/employee")
 public class EmployeeInfoManagerController {
 
-    @RequestMapping("/addheheheh")
+    @RequestMapping("/add")
     public ModelAndView toAdd(){
         ModelAndView modelAndView = new ModelAndView("employee/add");
         return modelAndView;
