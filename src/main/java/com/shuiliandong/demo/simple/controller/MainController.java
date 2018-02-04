@@ -22,11 +22,14 @@ public class MainController {
     @RequestMapping("/left")
     public ModelAndView toLeft(){
         ModelAndView modelAndView = new ModelAndView("main/left");
+
         LeftMenuMO leftMenuMO = new LeftMenuMO();
         GenerateTreeNoteUtil util = new GenerateTreeNoteUtil();
         List<LeftMenuMO.TreeNoteMO> list = util.getNoteAllForLevelAndNum(3,5, 20);
         leftMenuMO.setResult(list);
+
         modelAndView.addObject("result",leftMenuMO);
+
         System.out.println(JSON.toJSONString(list));
         return modelAndView;
     }
