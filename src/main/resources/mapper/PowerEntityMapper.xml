@@ -12,6 +12,11 @@
     <result column="status" property="status" jdbcType="INTEGER" />
     <result column="sort_no" property="sortNo" jdbcType="INTEGER" />
     <result column="flag" property="flag" jdbcType="INTEGER" />
+
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="parent_id" property="parentId" jdbcType="BIGINT" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="show_name" property="showName" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
     <!--
@@ -135,4 +140,13 @@
       flag = #{flag,jdbcType=INTEGER}
     where id = #{id,jdbcType=BIGINT}
   </update>
+
+  <select id="findByEmployeeNo" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    SELECT DISTINCT power.*
+    FROM t_power power
+      LEFT JOIN t_role_power_relations relation ON power.id = relation.power_id
+      LEFT JOIN t_role role ON role.id = relation.role_id
+      LEFT JOIN t_employee_info employee ON employee.employee_no = role.employee_no
+    where role.employee_no = #{employeeNo}
+  </select>
 </mapper>
