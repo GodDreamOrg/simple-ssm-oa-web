@@ -1,6 +1,6 @@
-package com.shuiliandong.demo.simple.Service.Impl;
+package com.shuiliandong.demo.simple.service.Impl;
 
-import com.shuiliandong.demo.simple.Service.EmployeeInfoService;
+import com.shuiliandong.demo.simple.service.EmployeeInfoService;
 import com.shuiliandong.demo.simple.dao.EmployeeInfoEntityMapper;
 import com.shuiliandong.demo.simple.entity.EmployeeInfoEntity;
 import org.springframework.stereotype.Service;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
  * @author v_hebo
  * @create 2018-02-04 20:05
  */
-@Service
+@Service("employeeInfoService")
 public class EmployeeInfoServiceImpl implements EmployeeInfoService {
 
 	public EmployeeInfoEntityMapper employeeInfoEntityMapper;

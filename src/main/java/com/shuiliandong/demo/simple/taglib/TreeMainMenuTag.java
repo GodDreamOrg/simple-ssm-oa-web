@@ -22,7 +22,7 @@ public class TreeMainMenuTag extends SimpleTagSupport {
     public void doTag() throws JspException, IOException {
         List<LeftMenuMO.TreeNoteMO> result = leftMenuMO.getResult();
         if (leftMenuMO == null || CollectionUtils.isEmpty(result)) {
-            throw new RuntimeException("数据为空，请不要逗我。");
+            return;
         }
 
         int level = 0;

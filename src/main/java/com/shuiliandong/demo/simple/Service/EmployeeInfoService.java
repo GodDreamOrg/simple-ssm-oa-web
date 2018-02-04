@@ -1,4 +1,4 @@
-package com.shuiliandong.demo.simple.Service;
+package com.shuiliandong.demo.simple.service;
 
 import com.shuiliandong.demo.simple.entity.EmployeeInfoEntity;
 
