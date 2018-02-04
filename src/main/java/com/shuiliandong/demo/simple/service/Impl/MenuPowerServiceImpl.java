@@ -19,6 +19,7 @@ public class MenuPowerServiceImpl implements IMenuPowerService{
     private PowerEntityMapper powerEntityMapper;
 
     public List<MenuPowerMO> findByEmployeeNo(String employeeNo) {
+        System.out.println("查询了 数据库");
         List<PowerEntity> entityList = powerEntityMapper.findByEmployeeNo(employeeNo);
 
         List<MenuPowerMO> result = new ArrayList<MenuPowerMO>();

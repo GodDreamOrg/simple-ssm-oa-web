@@ -40,7 +40,7 @@ public class MainController {
         leftMenuMO.setResult(list);
         System.out.println(JSON.toJSONString(list));
         // TODO employeeNo 是从登陆信息里面取来的
-        LeftMenuMO menuMO = getLeftMenuMO("SLD001");
+        LeftMenuMO menuMO = getLeftMenuMO("SLD008");
         logger.info("menuMO :::>>> "+JSON.toJSONString(menuMO));
         modelAndView.addObject("result", menuMO);
         return modelAndView;
