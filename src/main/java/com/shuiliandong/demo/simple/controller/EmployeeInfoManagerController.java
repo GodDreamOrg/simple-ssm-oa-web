@@ -16,7 +16,7 @@ import java.util.List;
 @RequestMapping("/employee")
 public class EmployeeInfoManagerController {
 
-    @RequestMapping("/add")
+    @RequestMapping("/addheheheh")
     public ModelAndView toAdd(){
         ModelAndView modelAndView = new ModelAndView("employee/add");
         return modelAndView;
